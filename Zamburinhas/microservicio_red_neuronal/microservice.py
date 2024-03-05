@@ -20,13 +20,12 @@ def predict_n_steps_ahead (x, central, maximo):
         predicciones.append(x[j+1][0]*maximo)
     return predicciones
 
-@app.before_first_request
 def init():
     for central in centrales:
         modelo = tf.keras.models.load_model('modelos/'+central+'.h5')
         modelos[central] = modelo
         x_train, x_test, y_train, y_test, maximo = cargar_datos_n_shift(central,0,7)
-        datos[central] = [x_train,x_test,y_test,y_test,maximo]
+        datos[central] = [x_train,x_test,y_train,y_test,maximo]
 
 @app.route('/prediccion')
 def prediccion():
@@ -47,4 +46,7 @@ def prediccion():
 
 if __name__ == '__main__':
     from waitress import serve
+    with app.app_context():
+       init()
     serve(app, host="0.0.0.0", port=8080)
+    

@@ -24,6 +24,6 @@ app.listen(4000, () => {
 
 // Conexión a la base de datos
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb://localhost/baseDatosZamburinhas', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://127.0.0.1:27017/baseDatosZamburinhas', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to database'))
   .catch(error => console.log('Database connection error:', error));
