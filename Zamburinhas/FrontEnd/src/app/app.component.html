@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark px- barra" id ="barra">
+  <a class="navbar-brand px-6 zambu" href="/home">ZAMBURIÑAS</a>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+          CENTRALES HIDROELÉCTRICAS
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li *ngFor="let hidroelectrica of hidroelectricas">
+            <a class="dropdown-item" href="/estacion/{{hidroelectrica._id}}">{{hidroelectrica.nombre}}</a>
+          </li>
+          <li *ngFor="let embalse of embalses">
+            <a class="dropdown-item" href="/estacion/{{embalse._id}}">{{embalse.nombre}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

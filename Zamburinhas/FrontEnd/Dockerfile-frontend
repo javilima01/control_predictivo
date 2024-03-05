@@ -1,0 +1,17 @@
+# Base image
+FROM node:19.6.1-alpine
+
+# Crea el directorio de trabajo
+WORKDIR /app
+
+# Copia los archivos necesarios a la imagen
+COPY package*.json ./
+COPY ./src ./src
+COPY ./angular*.json ./
+COPY ./tsconfig*.json ./
+
+# Instala las dependencias y el Angular CLI
+RUN npm install @angular-devkit/build-angular --force
+
+# Arranca la aplicación
+CMD ["npm", "start"]

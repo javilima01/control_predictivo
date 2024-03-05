@@ -1,0 +1,48 @@
+<app-loading *ngIf="loading"></app-loading>
+<div id ="todo">
+  <div id ="titulo-wrapper">
+    <h1>{{estacion.nombre}} ({{estacion.ubicacion}})</h1>
+  </div>
+  <div id="grande">
+      <app-weather-details class="weatherDetails" [temperaturas_semana]="temperaturas_semana"></app-weather-details>
+      <div id="predicciones">
+        <div id="datosTotal" class="interactivo">
+          <div class="fecha">
+            <div id="fechaInput1">
+              <label for="fecha-inicio">Fecha de inicio:&nbsp;</label>
+              <input type="date" id="fecha-inicio" [(ngModel)]="fechaInicio" (change)="onFechaInicioChange()" [min]="minDate"
+                [max]="maxDate" [value]="fechaInicio">
+            </div>
+            <div id="fechaInput2">
+              <label for="fecha-fin">Fecha de fin:&nbsp;</label>
+              <input type="date" id="fecha-fin" [(ngModel)]="fechaFin" (change)="graficaEmbalse()" [min]="minDate"
+                [max]="maxDate" [value]="fechaFin">
+            </div>
+          </div>
+          <div id="datos-wrapper">
+            <h2>Datos técnicos</h2>
+            <p><b>Rio: </b>{{estacion.rio}}</p>
+            <p><b>Superficie de la cuenca hidrográfica: </b>{{estacion.superficie_cuenca_hidrografica}} km2</p>
+            <p><b>Potencia Instalada: </b>{{estacion.potencia_instalada}} MW</p>
+            <p><b>Aportación media anual: </b>{{estacion.aportacion_media_anual}} hm3</p>
+            <p><b>Superficie embalse: </b> {{estacion.superficie_embalse}} ha</p>
+            <p><b>Explotador: </b>{{estacion.explotador}}</p>
+            <p><b>Altura desde cimientos: </b>{{estacion.altura_desde_cimientos}}</p>
+            <p><b>Capacidad Máxima embalse: </b>{{estacion.capacidad_embalse}}</p>
+            <p *ngIf="estacion.coordenadas"><b>Coordenadas: </b>{{estacion.coordenadas[0]}}, {{estacion.coordenadas[1]}}</p>
+          </div>
+        </div>
+        
+        <div class="graficas-circulares interactivo">
+          <div id="2 meses" class="circulo1"></div>
+          <div id="6 meses" class="circulo2"></div>
+        </div>
+      </div>
+      <div id="grafica-wrapper" class="interactivo">
+        <div id="container"></div>
+      </div>
+      
+    </div>
+  
+ 
+</div>

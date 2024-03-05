@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.barra{
+    height: 5vh;
+    padding-left: 2%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 12;
+}
+a {
+    text-decoration: none;
+}
+ul{
+    padding: 4%;
+}
+#zambu {
+    position: relative;
+    display: inline;
+    text-align: right;
+    grid-row: 2;
+}
+
+#texto {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 10px;
+}

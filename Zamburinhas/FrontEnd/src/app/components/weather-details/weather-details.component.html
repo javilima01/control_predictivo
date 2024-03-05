@@ -1,0 +1,21 @@
+<div id="grande2">
+  <div class="elementoSecundario">
+    <div class="interactivo" *ngFor="let temps of temperaturas_semana.slice(0,7)">
+      <div class="img-wrapper">
+          <img src="{{resolverImagen(temps)}}" alt="Imagen del clima">
+      </div>
+      <div class="info-wrapper">
+        <div class="fecha">{{temps.dy}}/{{temps.mo}}/{{temps.year}}</div>
+        <div class ="info-wrapper-chiquito">
+          <h4>{{temps.t2m}}°C</h4>
+          <h4>{{temps.t2m_min}}°C</h4>
+        </div>
+        <div class ="info-wrapper-chiquito"> 
+          <p>{{temps.prectotcorr}}mm</p>
+          <p>{{temps.rh2m}}%</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+</div>

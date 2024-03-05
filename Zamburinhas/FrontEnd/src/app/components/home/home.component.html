@@ -1,0 +1,45 @@
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://code.highcharts.com/modules/marker-clusters.js"></script>
+<script src="https://code.highcharts.com/modules/coloraxis.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="home">
+    <div id="container" class="interactivo"></div>
+    <div class="tabla" ng-controller="tablecontroller">
+        <div class="fecha">
+            <div class="fechaInput">
+            <label for="fecha-inicio">Fecha de referencia:</label>
+            <input type="date" id="fecha-inicio" [(ngModel)]="fechaInicio" (change)="onFechaInicioChange()" [min]="minDate"
+                [max]="maxDate" [value]="fechaInicio">
+            </div>
+        </div>
+        <div class="table-responsive interactivo">
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>       
+                        <th ng-click="ordenar('nombre')">Nombre</th>
+                        <th ng-click="ordenar('nivel')" scope="col">Nivel actual (Hm3)</th>
+                        <th ng-click="ordenar('nivel')" scope="col">Nivel hace 24h</th>
+                        <th ng-click="ordenar('nivel')" scope="col">Nivel hace 48h</th>
+                        <th ng-click="ordenar('nivel')" scope="col">Nivel hace 72h</th>
+                    </tr>
+                </thead>
+                <tbody ng-animate="'animate'"  ng-repeat="nivel in this.nivel | orderBy:campo:orden |filter:search">
+                    <tr *ngFor="let nivel of this.niveles;let i = index">
+                        <th class="nombre" scope="row">{{nivel.nombre|uppercase}}</th>
+                        <td class="nivel">{{this.nivel1[i]}}</td>
+                        <td class="nivel">{{this.nivel2[i]}}</td>
+                        <td class="nivel">{{this.nivel3[i]}}</td>
+                        <td class="nivel">{{this.nivel4[i]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="container2" class="interactivo"></div>
+    </div>
+</div>

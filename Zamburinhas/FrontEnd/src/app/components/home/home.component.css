@@ -1,0 +1,82 @@
+.home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    background-color: white;
+    width: auto;
+    height: 99vh;
+}
+*{
+    background-attachment: white;
+}
+#container {
+    height: 790px;
+    width: 925px;
+    place-self: right;
+    grid-column: 2;
+    grid-row: 1 / 2;
+    margin-top: 3vh;
+    margin-top: 7vh;
+}
+
+
+#container2 {
+    margin-top: 2vh;
+}
+
+
+.fecha {
+    margin-left: 2vh;
+    margin-top: 6.4vh;
+    margin-bottom: 2vh;
+}
+
+#fecha-inicio {
+    margin-left: 2vh;
+}
+
+.tabla {
+    place-self: left;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 20px;
+}
+
+caption {
+    font-size: large;
+    caption-side: top;
+    text-align: center;
+}
+
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+
+table{
+    text-align:left;
+    padding: 0;
+}
+
+.table-responsive {
+    height: 35%;
+    overflow: hidden;
+}
+
+
+thead,tbody {
+    background-color: white;
+}
+.interactivo {
+    border: 1px solid gray;
+    border-radius: 12px;
+    background-color: #F8F8F8;
+    box-shadow: 2px 2px 8px gray;
+    transition: 1s;
+  }
+.interactivo:hover {
+    z-index: 10;
+    transform:scale(1.025);
+}
