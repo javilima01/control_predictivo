@@ -11,6 +11,7 @@ COPY ./angular*.json ./
 COPY ./tsconfig*.json ./
 
 # Instala las dependencias y el Angular CLI
+RUN npm install --force
 RUN npm install @angular-devkit/build-angular --force
 
 # Arranca la aplicación
