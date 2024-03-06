@@ -42,3 +42,4 @@ testem.log
 .DS_Store
 Thumbs.db
 *.zip
+Zamburinhas/microservicio_red_neuronal/venv
