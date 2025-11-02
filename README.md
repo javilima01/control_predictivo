@@ -1,8 +1,11 @@
-# DESCRIPCION
-Sistema de control predictivo basado en redes neuronales, el cual permite saber con hasta 6 mese de antelación cuanta agua tendrá un embalse dado. Este sistema tiene el fin de que trabajadores y gerentes de embalses y centrales hidroeléctricas puedan hacer un uso más eficiente del agua.
-Sirvió como pasa a la final del concurso CDS TECH CHALLENGE 2023
-Contiene los docker files necesarios para su ejecución
-# GALERÍA DE IMÁGENES
+# DESCRIPTION
+
+Predictive control system based on neural networks that can forecast the water level of a reservoir up to **six months in advance**. The system is designed to help reservoir and hydroelectric plant managers make more efficient use of water resources.  
+
+This project qualified for the **final round of the CDS TECH CHALLENGE 2023**.  
+It includes the necessary **Docker files** for execution.
+
+# IMAGE GALLERY
 ![home](https://user-images.githubusercontent.com/85875718/229835404-97ebd672-9d77-45f3-81bd-9ee3dcf40507.png)
 
 ![info_central](https://user-images.githubusercontent.com/85875718/229835414-cfffbab1-a146-4ed5-818d-c2d4c32d952a.png)
