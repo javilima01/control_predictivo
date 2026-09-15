@@ -1,36 +1,37 @@
-__pycache__
-# See http://help.github.com/ignore-files/ for more about ignoring files.
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
 
 # Compiled output
 /dist
 /tmp
 /out-tsc
 /bazel-out
-
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
+.angular/cache/
 
 # IDEs and editors
 .idea/
+.vscode/
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+.history/
 
-# Visual Studio Code
-Zamburinhas/FrontEnd/.vscode/*
-Zamburinhas/FrontEnd/!.vscode/settings.json
-Zamburinhas/FrontEnd/!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+# Env
+.env
+.env.*
 
 # Miscellaneous
-Zamburinhas/FrontEnd/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage
@@ -42,4 +43,3 @@ testem.log
 .DS_Store
 Thumbs.db
 *.zip
-Zamburinhas/microservicio_red_neuronal/venv
